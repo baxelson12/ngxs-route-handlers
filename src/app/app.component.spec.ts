@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ngxs-routing'`, () => {
+  it(`should have as title 'ngxs-routing-two'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ngxs-routing');
+    expect(app.title).toEqual('ngxs-routing-two');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ngxs-routing app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('ngxs-routing-two app is running!');
   });
 });
