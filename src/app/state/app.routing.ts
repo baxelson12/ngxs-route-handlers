@@ -3,7 +3,9 @@ import { Router } from '@angular/router';
 import { RedirectToFirst, RedirectToSecond } from './app.actions';
 import { Actions, ofActionDispatched } from '@ngxs/store';
 
-@Injectable({ providedIn: 'root' })
+// Should be
+// @Injectable({ providedIn: 'root' })
+@Injectable()
 export class RouteHandler {
   constructor(private router: Router, private actions$: Actions) {
     this.actions$.pipe(ofActionDispatched(RedirectToFirst, RedirectToSecond)).subscribe((val) => {
